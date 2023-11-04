@@ -1,0 +1,38 @@
+{
+    "hosts": {
+        "h1": {"ip": "10.0.1.11/31", "mac": "08:00:00:00:01:11",
+               "commands":["route add default gw 10.0.1.10 dev eth0",
+                           "arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00"]},
+        "h2": {"ip": "10.0.1.22/31", "mac": "08:00:00:00:01:22",
+               "commands":["route add default gw 10.0.1.23 dev eth0",
+                           "arp -i eth0 -s 10.0.1.23 08:00:00:00:01:00"]},
+        "h3": {"ip": "10.0.1.33/31", "mac": "08:00:00:00:01:33",
+               "commands":["route add default gw 10.0.1.32 dev eth0",
+                           "arp -i eth0 -s 10.0.1.32 08:00:00:00:01:00"]},
+        "h4": {"ip": "10.0.2.11/31", "mac": "08:00:00:00:02:11",
+               "commands":["route add default gw 10.0.2.10 dev eth0",
+                           "arp -i eth0 -s 10.0.2.10 08:00:00:00:02:00"]},
+        "h5": {"ip": "10.0.3.11/31", "mac": "08:00:00:00:03:11",
+               "commands":["route add default gw 10.0.3.10 dev eth0",
+                           "arp -i eth0 -s 10.0.3.10 08:00:00:00:03:00"]},
+        "h6": {"ip": "10.0.6.11/31", "mac": "08:00:00:00:06:11",
+               "commands":["route add default gw 10.0.6.10 dev eth0",
+                           "arp -i eth0 -s 10.0.6.10 08:00:00:00:06:00"]}
+    },
+    "switches": {
+        "s1": {"runtime_json" : "pod_topo/s1-runtime.json"},
+        "s2": {"runtime_json" : "pod_topo/s2-runtime.json"},
+        "s3": {"runtime_json" : "pod_topo/s3-runtime.json"},
+        "s4": {"runtime_json" : "pod_topo/s4-runtime.json"},
+        "s5": {"runtime_json" : "pod_topo/s5-runtime.json"},
+        "s6": {"runtime_json" : "pod_topo/s6-runtime.json"}
+    },
+    "links": [
+         ["h1", "s1-p1"], ["h2", "s1-p2"], ["h3", "s1-p3"], ["s1-p4", "s2-p1"],
+         ["s1-p5", "s3-p1"], ["h4", "s2-p2"], ["h5", "s3-p2"],
+         ["s2-p4", "s5-p1"], ["s2-p3", "s4-p1"],
+         ["s3-p3", "s4-p2"], ["s3-p4", "s5-p2"], ["s4-p3", "s6-p3"], ["s5-p3", "s6-p2"],
+         ["h6", "s6-p1"],
+         ["s1-p6", "s2-p5"], ["s1-p7", "s3-p5"], ["s1-p9", "s6-p4"]
+    ]
+}

@@ -1,0 +1,51 @@
+{
+  "target": "bmv2",
+  "p4info": "build/load_balance_advanced.p4.p4info.txt",
+  "bmv2_json": "build/load_balance_advanced.json",
+  "table_entries": [
+    {
+      "table": "MyIngress.ecmp_group",
+      "default_action": true,
+      "action_name": "MyIngress.drop",
+      "action_params": { }
+    },
+    {
+      "table": "MyIngress.ecmp_group",
+      "match": {
+        "hdr.ipv4.dstAddr": ["10.0.2.0", 32]
+      },
+      "action_name": "MyIngress.set_ecmp_select",
+      "action_params": {
+        "ecmp_count": 100
+      }
+    },
+    {
+      "table": "MyEgress.send_frame",
+      "match": {
+        "standard_metadata.egress_port": 3
+      },
+      "action_name": "MyEgress.rewrite_mac",
+      "action_params": {
+        "smac": "00:00:00:02:03:00"
+      }
+    },
+    {
+      "table": "MyEgress.send_frame",
+      "match": {
+        "standard_metadata.egress_port": 4
+      },
+      "action_name": "MyEgress.rewrite_mac",
+      "action_params": {
+        "smac": "00:00:00:02:04:00"
+      }
+    },
+    {
+      "table": "MyEgress.swtrace",
+      "default_action": true,
+      "action_name": "MyEgress.add_swtrace",
+      "action_params": {
+         "swid": 2
+       }
+    }
+  ]
+}
