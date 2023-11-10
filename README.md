@@ -55,6 +55,7 @@ python3 get_queues_layer2.py
 ```
 
 After these 8 steps, wait several minutes and look at the opened ```I/O Graph``` window in step 3. The output shows the QCMP throughput, which will be similar to the graph as follows:
+
 <img src="./images/performance.png" width = "500"  align= left/>
 
 To change weights, please change the numbers in the file ```set_switches.sh``` ```change_switches.sh``` and ```q_table.py``` (function ```init_q_table``` and ```update_q_table``` under the class ```q_table```).
