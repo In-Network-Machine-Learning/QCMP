@@ -8,8 +8,9 @@ QCMP is a Reinforcement Learning based load balancing solution implemented withi
 ## Setting up the environment
 QCMP requires BMv2 as a simulation environment. To install the BMv2, follow the guide from [Link](https://github.com/p4lang/behavioral-model). From the link, one setup option is recommended by QCMP, the VirtualBox + VM ```P4 Tutorial Release 2023-04-24.ova```.
 
+
 ## Getting started
-To run QCMP, the following 8 steps are required:
+To run QCMP, clone the repository ```git clone https://github.com/In-Network-Machine-Learning/QCMP.git``` to a local directory, enter the QCMP folder, and run the following 8 steps:
 
 1. In terminal:
 ```bash
@@ -55,6 +56,14 @@ python3 get_queues_layer2.py
 
 After these 8 steps, wait several minutes and look at the opened ```I/O Graph``` window in step 3. The output shows the QCMP throughput, which will be similar to the graph as follows:
 <img src="./images/performance.png" width = "500"  align= left/>
+
+To change weights, please change the numbers in the file ```set_switches.sh``` ```change_switches.sh``` and ```q_table.py``` (function ```init_q_table``` and ```update_q_table``` under the class ```q_table```).
+
+
+## Used topology
+The topology used for this evaluation is shown as follows:
+
+<img src="./images/topology.jpg" width = "500"  align= left/>
 
 ## Reporting a Bug
 Please submit an issue with the appropriate label on [Github](../../issues).
