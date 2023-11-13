@@ -4,7 +4,7 @@
 #
 # Utility: This file is used to plot the result from Wireshark
 #
-# Copyright (c) 2020-2021 Benjamin Rienecker Modified by Changgang Zheng
+# Copyright (c) 2022-2023 Benjamin Rienecker Modified by Changgang Zheng
 # Copyright (c) Computing Infrastructure Group, Department of Engineering Science, University of Oxford
 
 import matplotlib.pyplot as plt

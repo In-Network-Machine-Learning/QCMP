@@ -2,7 +2,7 @@
 # This program is a free software tool, which does ensemble in-network reinforcement learning for load balancing.
 # licensed under Apache-2.0
 #
-# Copyright (c) 2020-2021 Benjamin Rienecker Modified by Changgang Zheng
+# Copyright (c) 2022-2023 Benjamin Rienecker Modified by Changgang Zheng
 # Copyright (c) Computing Infrastructure Group, Department of Engineering Science, University of Oxford
 
 import numpy as np
