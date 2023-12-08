@@ -3,7 +3,7 @@
 ![GitHub release](https://img.shields.io/badge/pre--release%20tag-v0.2.0-orange)
 
 ## Introduction
-QCMP is a Reinforcement Learning based load balancing solution implemented within the data plane, providing dynamic policy adjustment with quick response to changes in traffic. 
+QCMP is a Reinforcement Learning based load balancing solution implemented within the data plane, providing dynamic policy adjustment with quick response to changes in traffic. This repo is the artifact for the paper "QCMP: Load Balancing via In-Network Reinforcement Learning" [PDF](./images/Zheng_et_al_2023_QCMP_load_balancing.pdf) in 2nd ACM SIGCOMM Workshop on FIRA '23.
 
 ## Setting up the environment
 QCMP requires BMv2 as a simulation environment. To install the BMv2, follow the guide from [Link](https://github.com/p4lang/behavioral-model). From the link, one setup option is recommended by QCMP, the VirtualBox + VM ```P4 Tutorial Release 2023-04-24.ova```.
