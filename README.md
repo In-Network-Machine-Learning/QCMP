@@ -120,3 +120,8 @@ We are also excited to introduce several QCMP related papers ([Planter](https://
 QCMP is inspired by [Planter](https://github.com/In-Network-Machine-Learning/Planter) and [DINC](https://github.com/In-Network-Machine-Learning/DINC). 
 
 
+## Acknowledgments 
+
+Acknowledgements This work was partly funded by VMware.
+We acknowledge support from Intel. This paper complies with all
+applicable ethical standards of the authors’ home institution.
